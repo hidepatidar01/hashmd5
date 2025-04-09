@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD5 Hash Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>MD5 Hash Generator</h1>
+    <form method="post">
+        <input type="text" name="text" placeholder="Enter text" required>
+        <button type="submit">Generate Hash</button>
+    </form>
+    
+    {% if hash_result %}
+    <div class="result">
+        <p><strong>MD5 Hash:</strong> {{ hash_result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
